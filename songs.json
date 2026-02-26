@@ -1,0 +1,20 @@
+[
+  {
+    "title": "Example Song 1",
+    "artist": "Artist Name",
+    "price": 30,
+    "cover": "covers/song1.jpg",
+    "preview": "previews/song1-preview.mp3",
+    "buyLink": "https://payhip.com/b/REPLACE_ME",
+    "exclusive": true
+  },
+  {
+    "title": "Example Song 2",
+    "artist": "Artist Name",
+    "price": 25,
+    "cover": "covers/song2.jpg",
+    "preview": "previews/song2-preview.mp3",
+    "buyLink": "https://payhip.com/b/REPLACE_ME",
+    "exclusive": true
+  }
+]

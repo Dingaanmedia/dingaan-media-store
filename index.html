@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+  <title>Dingaan Media Store</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="brand">
+      <h1>Dingaan Media</h1>
+      <p>Preview. Purchase. Download instantly.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="toolbar">
+      <input id="search" type="search" placeholder="Search songs…" autocomplete="off" />
+      <a class="admin-link" href="admin.html">Admin</a>
+    </div>
+
+    <section id="grid" class="grid" aria-live="polite"></section>
+  </main>
+
+  <footer class="footer">
+    <p>© <span id="year"></span> Dingaan Media. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
