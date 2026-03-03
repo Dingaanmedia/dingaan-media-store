@@ -1,20 +1,20 @@
 [
   {
-    "title": "Example Song 1",
-    "artist": "Artist Name",
-    "price": 30,
+    "title": "Pfula mbilu ( She'tsonga the vocalist )",
+    "artist": "Ou'man Lepara",
+    "price": 20,
     "cover": "covers/song1.jpg",
     "preview": "previews/song1-preview.mp3",
-    "buyLink": "https://payhip.com/b/REPLACE_ME",
+    "buyLink": "https://payhip.com/b/hV3Ti",
     "exclusive": true
   },
   {
-    "title": "Example Song 2",
-    "artist": "Artist Name",
+    "title": "Va lava perekisi ( She'tsonga the vocalist )",
+    "artist": "Ou'man Lepara",
     "price": 25,
     "cover": "covers/song2.jpg",
     "preview": "previews/song2-preview.mp3",
-    "buyLink": "https://payhip.com/b/REPLACE_ME",
+    "buyLink": "https://payhip.com/b/lOnUC",
     "exclusive": true
   }
 ]

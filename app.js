@@ -1,13 +1,7 @@
-// Dingaan Media Store - public app
 const $ = (sel) => document.querySelector(sel);
-
-const state = {
-  songs: [],
-  filtered: [],
-};
+const state = { songs: [], filtered: [] };
 
 async function loadSongs() {
-  // Try localStorage override first (useful for preview/testing)
   const override = localStorage.getItem("dingaan_songs_override");
   if (override) {
     try {
@@ -15,12 +9,10 @@ async function loadSongs() {
       state.filtered = state.songs;
       render();
       return;
-    } catch (e) {
-      console.warn("Bad local override, ignoring.");
+    } catch {
       localStorage.removeItem("dingaan_songs_override");
     }
   }
-
   const res = await fetch("songs.json", { cache: "no-store" });
   state.songs = await res.json();
   state.filtered = state.songs;
@@ -28,12 +20,21 @@ async function loadSongs() {
 }
 
 function formatPrice(zar) {
-  // expects number or string; ensures Rxx
   const n = Number(zar);
   if (Number.isFinite(n)) return `R${n}`;
   const s = String(zar || "").trim();
   return s.startsWith("R") ? s : `R${s}`;
 }
+
+function escapeHtml(str) {
+  return String(str ?? "")
+    .replaceAll("&", "&amp;")
+    .replaceAll("<", "&lt;")
+    .replaceAll(">", "&gt;")
+    .replaceAll('"', "&quot;")
+    .replaceAll("'", "&#039;");
+}
+function escapeAttr(str) { return escapeHtml(str).replaceAll("`", "&#096;"); }
 
 function card(song) {
   const cover = song.cover || "covers/placeholder.jpg";
@@ -43,7 +44,6 @@ function card(song) {
     <audio controls preload="none">
       <source src="${escapeAttr(song.preview)}" type="audio/mpeg">
     </audio>` : "";
-
   const buyHref = song.buyLink || "#";
   const buyText = song.buyLink ? "Buy & Download" : "Link Missing";
 
@@ -66,42 +66,16 @@ function card(song) {
 }
 
 function render() {
-  const grid = $("#grid");
-  grid.innerHTML = state.filtered.map(card).join("");
-
+  $("#grid").innerHTML = state.filtered.map(card).join("");
   $("#year").textContent = new Date().getFullYear();
 }
 
 function filterSongs(q) {
   const query = (q || "").trim().toLowerCase();
-  if (!query) {
-    state.filtered = state.songs;
-    render();
-    return;
-  }
-  state.filtered = state.songs.filter(s => {
-    const hay = `${s.title||""} ${s.artist||""}`.toLowerCase();
-    return hay.includes(query);
-  });
+  if (!query) { state.filtered = state.songs; render(); return; }
+  state.filtered = state.songs.filter(s => (`${s.title||""} ${s.artist||""}`.toLowerCase()).includes(query));
   render();
 }
 
-function escapeHtml(str) {
-  return String(str ?? "")
-    .replaceAll("&", "&amp;")
-    .replaceAll("<", "&lt;")
-    .replaceAll(">", "&gt;")
-    .replaceAll('"', "&quot;")
-    .replaceAll("'", "&#039;");
-}
-function escapeAttr(str) {
-  // minimal attr escaping
-  return escapeHtml(str).replaceAll("`", "&#096;");
-}
-
 $("#search").addEventListener("input", (e) => filterSongs(e.target.value));
-
-loadSongs().catch(err => {
-  console.error(err);
-  $("#grid").innerHTML = `<p style="color:rgba(255,255,255,.7)">Failed to load songs.json</p>`;
-});
+loadSongs().catch(() => { $("#grid").innerHTML = `<p style="color:rgba(255,255,255,.7)">Failed to load songs.json</p>`; });
