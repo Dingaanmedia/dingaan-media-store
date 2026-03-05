@@ -19,11 +19,26 @@ async function loadSongs() {
   render();
 }
 
+const EXCHANGE_RATE = 18.5; // 1 USD ≈ R18.50
 function formatPrice(zar) {
   const n = Number(zar);
-  if (Number.isFinite(n)) return `R${n}`;
+
+  if (Number.isFinite(n)) {
+    const usd = (n / EXCHANGE_RATE).toFixed(2);
+    return `R${n.toFixed(2)} ($${usd} USD)`;
+  }
+
   const s = String(zar || "").trim();
-  return s.startsWith("R") ? s : `R${s}`;
+  const clean = s.replace("R", "");
+  const num = Number(clean);
+
+  if (Number.isFinite(num)) {
+    const usd = (num / EXCHANGE_RATE).toFixed(2);
+    return `R${num.toFixed(2)} ($${usd} USD)`;
+  }
+
+  return s;
+}
 }
 
 function escapeHtml(str) {

@@ -107,7 +107,24 @@ $("#clearPreview").addEventListener("click", () => {
 // Save-to-repo button is present but will only work after you enable the Netlify function later
 $("#saveRemote").addEventListener("click", async () => {
   const commitMsg = ($("#commitMsg").value || "").trim() || "Update songs.json";
-  status("Save-to-Repo not enabled yet. Use Export songs.json for now.", true);
-});
+  try {
+    status("Saving to repo…");
 
+    const res = await fetch("/.netlify/functions/save-songs", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ songs, message: commitMsg }),
+    });
+
+    const text = await res.text();
+    if (!res.ok) {
+      status(`Save failed: ${text}`, true);
+      return;
+    }
+
+    status("Saved to GitHub ✅ Netlify will redeploy now.");
+  } catch (e) {
+    status(`Save error: ${e?.message || e}`, true);
+  }
+});
 loadSongs().catch(() => status("Failed to load songs.json", true));

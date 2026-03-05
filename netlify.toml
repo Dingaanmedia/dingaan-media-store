@@ -1,6 +1,7 @@
 [build]
-  functions = "netlify/functions"
-  publish = "."
+functions = "netlify/functions"
+publish = "."
+
 [[edge_functions]]
 function = "protect-control"
 path = "/control/*"
