@@ -39,7 +39,7 @@ function formatPrice(zar) {
 
   return s;
 }
-}
+
 
 function escapeHtml(str) {
   return String(str ?? "")
