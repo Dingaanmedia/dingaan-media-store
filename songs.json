@@ -16,5 +16,14 @@
     "preview": "previews/song2-preview.mp3",
     "buyLink": "https://payhip.com/b/lOnUC",
     "exclusive": true
+  },
+  {
+    "title": "Re togeleng ( Feat. Mojalefa HittBoii )",
+    "artist": "Ou'man Lepara",
+    "price": 25,
+    "cover": "covers/song3.jpg",
+    "preview": "previews/song3-preview.mp3",
+    "buyLink": "https://payhip.com/b/cklr0",
+    "exclusive": true
   }
 ]
