@@ -65,18 +65,20 @@ function card(song) {
   return `
   <article class="card">
     <img class="cover" src="${escapeAttr(cover)}" alt="Cover art for ${escapeAttr(song.title || "Song")}" loading="lazy" />
-    <div class="meta">
-      <div>
-        <h3 class="title">${escapeHtml(song.title || "Untitled")}</h3>
-        ${artist}
-      </div>
-      <div class="price">${formatPrice(song.price)}</div>
+<div class="details">
+  <div class="meta">
+    <div>
+      <h3 class="title">${escapeHtml(song.title || "Untitled")}</h3>
+      ${artist}
     </div>
-    ${badge}
-    ${preview}
-    <div class="actions">
-      <a class="buy" href="${escapeAttr(buyHref)}" target="_blank" rel="noopener">${buyText}</a>
-    </div>
+    <div class="price">${formatPrice(song.price)}</div>
+  </div>
+  ${badge}
+  ${preview}
+  <div class="actions">
+    <a class="buy" href="${escapeAttr(buyHref)}" target="_blank" rel="noopener">${buyText}</a>
+  </div>
+</div>
   </article>`;
 }
 
@@ -93,4 +95,17 @@ function filterSongs(q) {
 }
 
 $("#search").addEventListener("input", (e) => filterSongs(e.target.value));
+document.addEventListener("play", (e) => {
+  const current = e.target;
+
+  if (current.tagName !== "AUDIO") return;
+
+  document.querySelectorAll("audio").forEach((audio) => {
+    if (audio !== current) {
+      audio.pause();
+      audio.currentTime = 0;
+      audio.load(); // resets the UI/progress bar cleanly
+    }
+  });
+}, true);
 loadSongs().catch(() => { $("#grid").innerHTML = `<p style="color:rgba(255,255,255,.7)">Failed to load songs.json</p>`; });
