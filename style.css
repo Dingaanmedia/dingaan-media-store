@@ -1,10 +1,15 @@
 /* Dingaan Media Store - clean dark store aesthetic */
 :root{
-  --bg:#0b0b0f;
+  --bg:#070b1a;
   --text:#ffffff;
-  --muted:#a3a3b2;
+  --muted:#9aa0b5;
   --line:rgba(255,255,255,.08);
-  --accent:#ffcc00;
+
+  /* AudioPie theme */
+  --accent:#ff4d8d;
+  --accent2:#7a5cff;
+  --accent3:#00e5ff;
+
   --radius:14px;
 }
 *{box-sizing:border-box}
@@ -12,9 +17,10 @@ html,body{height:100%}
 body{
   margin:0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  background: radial-gradient(1200px 800px at 20% -10%, rgba(255,204,0,.18), transparent 60%),
-              radial-gradient(1000px 600px at 90% 10%, rgba(255,255,255,.08), transparent 55%),
-              var(--bg);
+background:
+  radial-gradient(1000px 600px at 10% -10%, rgba(122,92,255,.25), transparent 60%),
+  radial-gradient(1000px 600px at 90% 0%, rgba(255,77,141,.2), transparent 60%),
+  var(--bg);
   color:var(--text);
 }
 .header{border-bottom:1px solid var(--line); padding:34px 18px 26px;}
@@ -29,7 +35,10 @@ body{
   background:rgba(255,255,255,.04); color:var(--text);
 }
 #search::placeholder{color:rgba(255,255,255,.45)}
-#search:focus{border-color:rgba(255,204,0,.5)}
+#search:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 10px rgba(255,77,141,.3);
+}
 .grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px;}
 .card{
   background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
@@ -47,6 +56,11 @@ body{
   display: flex;
   flex-direction: column;
   height: 100%;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:rgba(122,92,255,.6);
+  box-shadow:0 0 20px rgba(122,92,255,.15);
 }
 .cover{
   width:100%; aspect-ratio:1/1; object-fit:cover;
@@ -89,4 +103,29 @@ audio{width:100%; margin-top:12px;}
 .footer{
   padding:26px 18px 34px; border-top:1px solid var(--line);
   text-align:center; color:rgba(255,255,255,.55); font-size:12px;
+}
+.logo{
+  width:140px;
+  max-width:80%;
+  margin-bottom:10px;
+}
+
+.tagline{
+  margin:6px 0 0;
+  font-size:13px;
+  letter-spacing:2px;
+  color:var(--accent3);
+}
+button{
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  border:none;
+  color:#fff;
+  padding:8px 12px;
+  border-radius:10px;
+  cursor:pointer;
+  transition:all .2s ease;
+}
+
+button:hover{
+  box-shadow:0 0 12px rgba(255,77,141,.4);
 }
