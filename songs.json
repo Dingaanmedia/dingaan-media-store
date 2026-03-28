@@ -2,7 +2,7 @@
   {
     "title": "Pfula mbilu ( She'tsonga the vocalist )",
     "artist": "Ou'man Lepara",
-    "price": 30,
+    "price": 15,
     "cover": "covers/song1.jpg",
     "preview": "previews/song1-preview.mp3",
     "buyLink": "https://payhip.com/b/hV3Ti",
@@ -11,7 +11,7 @@
   {
     "title": "Va lava perekisi ( She'tsonga the vocalist )",
     "artist": "Ou'man Lepara",
-    "price": 30,
+    "price": 15,
     "cover": "covers/song2.jpg",
     "preview": "previews/song2-preview.mp3",
     "buyLink": "https://payhip.com/b/lOnUC",
@@ -20,10 +20,19 @@
   {
     "title": "Re tlogeleng ( Feat. Mojalefa HittBoii )",
     "artist": "Ou'man Lepara",
-    "price": 25,
+    "price": 15,
     "cover": "covers/song3.jpg",
     "preview": "previews/song3-preview.mp3",
     "buyLink": "https://payhip.com/b/cklr0",
+    "exclusive": true
+  },
+  {
+    "title": "Xewani ntsena ( Feat. She'Tsonga The Vocalist )",
+    "artist": "Ou'man Lepara & Deeper Kay",
+    "price": 15,
+    "cover": "covers/song4",
+    "preview": "previews/song4-preview.mp3",
+    "buyLink": "https://payhip.com/b/oEsXb",
     "exclusive": true
   }
 ]
