@@ -46,11 +46,11 @@ background:
   border-color:var(--accent);
   box-shadow:0 0 10px rgba(255,77,141,.3);
 }
-.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:22px;}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(230px,1fr)); gap:18px;}
 .card{
   background:linear-gradient(180deg, rgba(255,255,255,.05), rgba(255,255,255,.02));
   border:1px solid var(--line); border-radius:var(--radius);
-  padding:16px; overflow:hidden;
+  padding:14px; overflow:hidden;
   transition:transform .18s ease,border-color .18s ease;
 }
 .card{
@@ -132,7 +132,7 @@ background:
   letter-spacing:.3px;
 }
 }
-audio{width:100%; margin-top:14px;}
+audio{width:100%; margin-top:12px;}
 .actions{
   display:flex;
   gap:10px;
