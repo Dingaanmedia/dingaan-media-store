@@ -78,7 +78,14 @@ const preview = song.preview ? `
   ${badge}
   ${preview}
   <div class="actions">
-    <a class="buy" href="${escapeAttr(buyHref)}" target="_blank" rel="noopener">${buyText}</a>
+    <a class="buy" 
+   href="${escapeAttr(buyHref)}" 
+   target="_blank" 
+   rel="noopener"
+   data-title="${escapeAttr(song.title)}"
+   data-artist="${escapeAttr(song.artist || '')}">
+   ${buyText}
+</a>
   </div>
 </div>
   </article>`;
@@ -110,6 +117,19 @@ document.addEventListener("play", (e) => {
     song_name: songName,
     artist_name: artistName
   });
+  
+  document.addEventListener("click", (e) => {
+  const btn = e.target.closest(".buy");
+  if (!btn) return;
+
+  const songName = btn.dataset.title || "Unknown";
+  const artistName = btn.dataset.artist || "Unknown";
+
+  gtag('event', 'buy_click', {
+    song_name: songName,
+    artist_name: artistName
+  });
+});
 
   // Pause other songs
 
