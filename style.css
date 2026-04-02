@@ -212,3 +212,16 @@ button{
 button:hover{
   box-shadow:0 0 12px rgba(255,77,141,.4);
 }
+
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: #0d0d0d;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 9999;
+}

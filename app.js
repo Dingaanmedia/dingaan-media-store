@@ -55,10 +55,12 @@ function card(song) {
   const cover = song.cover || "covers/placeholder.jpg";
   const artist = song.artist ? `<p class="artist">${escapeHtml(song.artist)}</p>` : "";
   const badge = song.exclusive ? `<span class="badge">Exclusive</span>` : "";
-  const preview = song.preview ? `
-    <audio controls preload="none">
-      <source src="${escapeAttr(song.preview)}" type="audio/mpeg">
-    </audio>` : "";
+const preview = song.preview ? `
+  <audio controls preload="none" 
+    data-title="${escapeAttr(song.title)}"
+    data-artist="${escapeAttr(song.artist || '')}">
+    <source src="${escapeAttr(song.preview)}" type="audio/mpeg">
+  </audio>` : "";
   const buyHref = song.buyLink || "#";
   const buyText = song.buyLink ? "Buy & Download" : "Link Missing";
 
@@ -100,6 +102,17 @@ document.addEventListener("play", (e) => {
 
   if (current.tagName !== "AUDIO") return;
 
+  const songName = current.dataset.title || "Unknown";
+  const artistName = current.dataset.artist || "Unknown";
+
+  // Track song
+  gtag('event', 'play_song', {
+    song_name: songName,
+    artist_name: artistName
+  });
+
+  // Pause other songs
+
   document.querySelectorAll("audio").forEach((audio) => {
     if (audio !== current) {
       audio.pause();
@@ -109,3 +122,21 @@ document.addEventListener("play", (e) => {
   });
 }, true);
 loadSongs().catch(() => { $("#grid").innerHTML = `<p style="color:rgba(255,255,255,.7)">Failed to load songs.json</p>`; });
+
+function acceptCookies() {
+  localStorage.setItem("cookiesAccepted", "true");
+  document.getElementById("cookie-banner").style.display = "none";
+
+  // Start analytics AFTER consent
+  gtag('config', 'G-TYXZ4F77QE');
+}
+
+window.onload = function () {
+  if (localStorage.getItem("cookiesAccepted") === "true") {
+    document.getElementById("cookie-banner").style.display = "none";
+
+    // Start analytics automatically
+    gtag('config', 'G-TYXZ4F77QE');
+  }
+};
+
