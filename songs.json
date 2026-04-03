@@ -2,7 +2,7 @@
   {
     "title": "Pfula mbilu ( She'tsonga the vocalist )",
     "artist": "Ou'man Lepara",
-    "price": 15,
+    "price": 20,
     "cover": "covers/song1.jpg",
     "preview": "previews/song1-preview.mp3",
     "buyLink": "https://payhip.com/b/hV3Ti",
@@ -11,7 +11,7 @@
   {
     "title": "Va lava perekisi ( She'tsonga the vocalist )",
     "artist": "Ou'man Lepara",
-    "price": 15,
+    "price": 20,
     "cover": "covers/song2.jpg",
     "preview": "previews/song2-preview.mp3",
     "buyLink": "https://payhip.com/b/lOnUC",
@@ -20,7 +20,7 @@
   {
     "title": "Re tlogeleng ( Feat. Mojalefa HittBoii )",
     "artist": "Ou'man Lepara",
-    "price": 15,
+    "price": 20,
     "cover": "covers/song3.jpg",
     "preview": "previews/song3-preview.mp3",
     "buyLink": "https://payhip.com/b/cklr0",
@@ -29,10 +29,28 @@
   {
     "title": "Xewani ntsena ( Feat. She'Tsonga The Vocalist )",
     "artist": "Ou'man Lepara & Deeper Kay",
-    "price": 15,
+    "price": 20,
     "cover": "covers/song4.jpg",
     "preview": "previews/song4-preview.mp3",
     "buyLink": "https://payhip.com/b/oEsXb",
+    "exclusive": true
+  },
+  {
+    "title": "Thokoza ( Feat. Shaun 808 )",
+    "artist": "Deeper Kay",
+    "price": 20,
+    "cover": "covers/song6.jpg",
+    "preview": "previews/song6-preview.mp3",
+    "buyLink": "https://payhip.com/b/tFTHY",
+    "exclusive": false
+  },
+  {
+    "title": "Inde lendlela ( Feat. Shaun 808 & Soul G SA )",
+    "artist": "Deeper Kay & Itu-SA",
+    "price": 20,
+    "cover": "covers/song5.jpg",
+    "preview": "previews/song5-preview.mp3",
+    "buyLink": "https://payhip.com/b/VLDbs",
     "exclusive": true
   }
 ]
