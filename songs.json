@@ -39,16 +39,16 @@
     "title": "Thokoza ( Feat. Shaun 808 )",
     "artist": "Deeper Kay",
     "price": 20,
-    "cover": "covers/song6.jpg",
+    "cover": "covers/song6.jpeg",
     "preview": "previews/song6-preview.mp3",
     "buyLink": "https://payhip.com/b/tFTHY",
-    "exclusive": false
+    "exclusive": true
   },
   {
     "title": "Inde lendlela ( Feat. Shaun 808 & Soul G SA )",
     "artist": "Deeper Kay & Itu-SA",
     "price": 20,
-    "cover": "covers/song5.jpg",
+    "cover": "covers/song5.jpeg",
     "preview": "previews/song5-preview.mp3",
     "buyLink": "https://payhip.com/b/VLDbs",
     "exclusive": true
