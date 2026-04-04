@@ -52,5 +52,32 @@
     "preview": "previews/song5-preview.mp3",
     "buyLink": "https://payhip.com/b/VLDbs",
     "exclusive": true
+  },
+  {
+    "title": "Struu pash pash",
+    "artist": "Mojalefa HittBoii",
+    "price": 20,
+    "cover": "covers/song.jpg",
+    "preview": "previews/song7-preview.mp3",
+    "buyLink": "https://payhip.com/b/L8i4J",
+    "exclusive": true
+  },
+  {
+    "title": "4am in london",
+    "artist": "MuzicalXpression",
+    "price": 20,
+    "cover": "covers/song8.jpg",
+    "preview": "previews/song8-preview.mp3",
+    "buyLink": "https://payhip.com/b/fSuk4",
+    "exclusive": true
+  },
+  {
+    "title": "Wine & dine",
+    "artist": "MuzicalXpression",
+    "price": 20,
+    "cover": "covers/song9.jpg",
+    "preview": "previews/song9-preview.mp3",
+    "buyLink": "https://payhip.com/b/jQxaN",
+    "exclusive": true
   }
 ]
