@@ -79,5 +79,14 @@
     "preview": "previews/song9-preview.mp3",
     "buyLink": "https://payhip.com/b/jQxaN",
     "exclusive": true
+  },
+  {
+    "title": "Nkapese ka matla ( Feat. Mojalefa HittBoii )",
+    "artist": "Ou'man Lepara",
+    "price": 20,
+    "cover": "covers/song10.jpg",
+    "preview": "previews/song10-preview.mp3",
+    "buyLink": "https://payhip.com/b/XFiD7",
+    "exclusive": true
   }
 ]
