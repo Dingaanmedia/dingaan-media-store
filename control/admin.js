@@ -36,11 +36,11 @@ function render(){
 
 function openEditor(i){
   const editing = i !== null && i !== undefined;
-  const s = editing ? songs[i] : { title:"", artist:"", price:15, cover:"", preview:"", buyLink:"", exclusive:true };
+  const s = editing ? songs[i] : { title:"", artist:"", price:1, cover:"", preview:"", buyLink:"", exclusive:true };
   $("#dlgTitle").textContent = editing ? "Edit Song" : "Add Song";
   form.title.value = s.title || "";
   form.artist.value = s.artist || "";
-  form.price.value = Number(s.price ?? 15);
+  form.price.value = Number(s.price ?? 1);
   form.cover.value = s.cover || "";
   form.preview.value = s.preview || "";
   form.buyLink.value = s.buyLink || "";
@@ -62,8 +62,8 @@ $("#add").addEventListener("click", () => openEditor(null));
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   const price = Number(form.price.value);
-  if(!Number.isFinite(price) || price < 15 || price > 100){
-    status("Price must be between R15 and R100.", true);
+  if(!Number.isFinite(price) || price < 1 || price > 100){
+    status("Price must be between R1 and R100.", true);
     return;
   }
   const updated = {
