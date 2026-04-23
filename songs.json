@@ -5,7 +5,7 @@
     "price": 20,
     "cover": "covers/song1.jpg",
     "preview": "previews/song1-preview.mp3",
-    "buyLink": "https://payhip.com/b/hV3Ti",
+    "buyLink": "https://store.audiopie.co.za/b/pfulambilu",
     "exclusive": true
   },
   {
@@ -14,7 +14,7 @@
     "price": 20,
     "cover": "covers/song2.jpg",
     "preview": "previews/song2-preview.mp3",
-    "buyLink": "https://payhip.com/b/lOnUC",
+    "buyLink": "https://store.audiopie.co.za/b/valavaperekisi",
     "exclusive": true
   },
   {
@@ -23,7 +23,7 @@
     "price": 20,
     "cover": "covers/song3.jpg",
     "preview": "previews/song3-preview.mp3",
-    "buyLink": "https://payhip.com/b/cklr0",
+    "buyLink": "https://store.audiopie.co.za/b/retlogeleng",
     "exclusive": true
   },
   {
@@ -32,7 +32,7 @@
     "price": 20,
     "cover": "covers/song4.jpg",
     "preview": "previews/song4-preview.mp3",
-    "buyLink": "https://payhip.com/b/oEsXb",
+    "buyLink": "https://store.audiopie.co.za/b/xewanintsena",
     "exclusive": true
   },
   {
@@ -41,7 +41,7 @@
     "price": 20,
     "cover": "covers/song6.jpeg",
     "preview": "previews/song6-preview.mp3",
-    "buyLink": "https://payhip.com/b/tFTHY",
+    "buyLink": "https://store.audiopie.co.za/b/thokoza",
     "exclusive": true
   },
   {
@@ -50,7 +50,7 @@
     "price": 20,
     "cover": "covers/song5.jpeg",
     "preview": "previews/song5-preview.mp3",
-    "buyLink": "https://payhip.com/b/VLDbs",
+    "buyLink": "https://store.audiopie.co.za/b/indelendlela",
     "exclusive": true
   },
   {
@@ -59,7 +59,7 @@
     "price": 20,
     "cover": "covers/song7.jpg",
     "preview": "previews/song7-preview.mp3",
-    "buyLink": "https://payhip.com/b/L8i4J",
+    "buyLink": "https://store.audiopie.co.za/b/struupashpash",
     "exclusive": true
   },
   {
@@ -68,7 +68,7 @@
     "price": 20,
     "cover": "covers/song8.jpg",
     "preview": "previews/song8-preview.mp3",
-    "buyLink": "https://payhip.com/b/fSuk4",
+    "buyLink": "https://store.audiopie.co.za/b/4aminlondon",
     "exclusive": true
   },
   {
@@ -77,7 +77,7 @@
     "price": 20,
     "cover": "covers/song9.jpg",
     "preview": "previews/song9-preview.mp3",
-    "buyLink": "https://payhip.com/b/jQxaN",
+    "buyLink": "https://store.audiopie.co.za/b/wineanddine",
     "exclusive": true
   },
   {
@@ -88,5 +88,86 @@
     "preview": "previews/song10-preview.mp3",
     "buyLink": "https://payhip.com/b/XFiD7",
     "exclusive": true
+  },
+  {
+    "title": "Batho ba mogae 9 Feat. Deeper Kay )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song11.jpg",
+    "preview": "previews/song11-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/bathobamogae",
+    "exclusive": true
+  },
+  {
+    "title": "Jakalase ( Feat. Deeper Kay )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song19.jpg",
+    "preview": "previews/song19-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/jakalase",
+    "exclusive": false
+  },
+  {
+    "title": "Ke Rumilwe ( Feat. MuzicalXpression & Ghoster Rsa )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song12.jpg",
+    "preview": "previews/song12-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/kerumilwe",
+    "exclusive": false
+  },
+  {
+    "title": "Emarabini ( Feat. Amogelang & Botshelo )",
+    "artist": "Ou'man Lepara",
+    "price": 20,
+    "cover": "covers/song15.jpg",
+    "preview": "previews/song15-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/emarabini",
+    "exclusive": true
+  },
+  {
+    "title": "Mosadi wa merekiwa ( Feat. Lesly Makhubela )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song13.jpg",
+    "preview": "previews/song13-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/mosadiwamerekiwa",
+    "exclusive": false
+  },
+  {
+    "title": "Spendela wena",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song14.jpg",
+    "preview": "previews/song14-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/spendelawena",
+    "exclusive": false
+  },
+  {
+    "title": "Indodana ka thixo ( Feat. Buckz & MuzicalXpression )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song17.jpg",
+    "preview": "previews/song17-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/indodanakathixo",
+    "exclusive": false
+  },
+  {
+    "title": "Bana Beso 3Step Mix ( Feat. Buckz, R-Trax Sa & Deeper Kay )",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song18.jpg",
+    "preview": "previews/song18-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/banabeso",
+    "exclusive": false
+  },
+  {
+    "title": "Bana ba motho",
+    "artist": "Ou'man Lepara",
+    "price": 5,
+    "cover": "covers/song16.jpg",
+    "preview": "previews/song16-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/banabamotho",
+    "exclusive": false
   }
 ]
