@@ -169,5 +169,23 @@
     "preview": "previews/song16-preview.mp3",
     "buyLink": "https://store.audiopie.co.za/b/banabamotho",
     "exclusive": false
+  },
+  {
+    "title": "How many ( Feat. Mojalefa HittBoii & Ghoster Rsa )",
+    "artist": "Ou'man Lepara",
+    "price": 15,
+    "cover": "covers/song20.jpg",
+    "preview": "previews/song20-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/howmany",
+    "exclusive": true
+  },
+  {
+    "title": "Shashalaza ( Feat. Mojalefa HittBoii & Ghoster Rsa )",
+    "artist": "Ou'man Lepara",
+    "price": 15,
+    "cover": "covers/song21.jpg",
+    "preview": "previews/song21-preview.mp3",
+    "buyLink": "https://store.audiopie.co.za/b/shashalaza",
+    "exclusive": true
   }
 ]
